@@ -5,7 +5,13 @@ function App() {
 
   return (
     <>
+    <div className="cards">
       <Card />
+      <Card />
+      <Card />
+    </div>
+    
+    
     </>
   )
 }
