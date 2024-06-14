@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 function ViewItemById() {
-
   const [item, setItem] = useState([])
 
-  async function carregarDados() {
-    const apiURL = "https://rickandmortyapi.com/api/character/1"
+  const { itemId } = useParams()
+  console.log(itemId)
 
+  async function carregarDados() {
+    const apiURL = "https://rickandmortyapi.com/api/character/" + itemId
+    console.log(apiURL)
     const response = await fetch(apiURL)
 
     const body = await response.json()
 
     const results = body.results
-
-    console.log('results', results)
 
     setItem(body)
 

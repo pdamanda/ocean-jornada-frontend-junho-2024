@@ -10,7 +10,7 @@ const router = createBrowserRouter ([
     element: <Home/>    
   },
   {
-    path: '/item/:itemID',
+    path: '/item/:itemId',
     element: <ViewItemById/>
   }
 ])
